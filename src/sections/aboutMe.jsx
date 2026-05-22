@@ -40,7 +40,7 @@ const AboutSplit = () => {
         <div className="w-full md:w-1/2">
           <div className="rounded-2xl overflow-hidden shadow-[0_0_35px_rgba(34,211,238,0.35)] border border-cyan-400/40">
             <img
-              src="/public/images/me3.png"
+              src="/images/me3.png"
               alt="Your Photo"
               className="w-full object-cover"
             />
