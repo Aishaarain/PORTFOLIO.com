@@ -1,17 +1,48 @@
+// import { logoIconsList } from "../constants";
+
+// const LogoIcon = ({ icon }) => {
+//   return (
+//     <div className="flex-none flex-center marquee-item">
+//       <img src={icon.imgPath} alt={icon.name} />
+//     </div>
+//   );
+// };
+
+// const LogoShowcase = () => (
+//   <div className="md:my-20 my-10 relative">
+//     <div className="gradient-edge" />
+//     <div className="gradient-edge" />
+
+//     <div className="marquee h-52">
+//       <div className="marquee-box md:gap-12 gap-5">
+//         {logoIconsList.map((icon, index) => (
+//           <LogoIcon key={index} icon={icon} />
+//         ))}
+
+//         {logoIconsList.map((icon, index) => (
+//           <LogoIcon key={index} icon={icon} />
+//         ))}
+//       </div>
+//     </div>
+//   </div>
+// );
+
+// export default LogoShowcase;
+
 import { logoIconsList } from "../constants";
 
 const LogoIcon = ({ icon }) => {
   return (
-    <div className="flex-none flex-center marquee-item">
+    <div className="flex-none flex-center marquee-item neon-logo">
       <img src={icon.imgPath} alt={icon.name} />
     </div>
   );
 };
 
 const LogoShowcase = () => (
-  <div className="md:my-20 my-10 relative">
-    <div className="gradient-edge" />
-    <div className="gradient-edge" />
+  <div className="md:my-20 my-10 relative neon-showcase">
+    <div className="gradient-edge neon-edge" />
+    <div className="gradient-edge neon-edge" />
 
     <div className="marquee h-52">
       <div className="marquee-box md:gap-12 gap-5">
@@ -20,7 +51,7 @@ const LogoShowcase = () => (
         ))}
 
         {logoIconsList.map((icon, index) => (
-          <LogoIcon key={index} icon={icon} />
+          <LogoIcon key={`dup-${index}`} icon={icon} />
         ))}
       </div>
     </div>

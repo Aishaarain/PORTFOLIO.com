@@ -1,3 +1,4 @@
+
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
@@ -20,7 +21,7 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true); // Show loading state
+    setLoading(true);
 
     try {
       await emailjs.sendForm(
@@ -30,32 +31,37 @@ const Contact = () => {
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
       );
 
-      // Reset form and stop loading
       setForm({ name: "", email: "", message: "" });
     } catch (error) {
-      console.error("EmailJS Error:", error); // Optional: show toast
+      console.error("EmailJS Error:", error);
     } finally {
-      setLoading(false); // Always stop loading, even on error
+      setLoading(false);
     }
   };
 
   return (
-    <section id="contact" className="flex-center section-padding">
+    <section id="contact" className="flex-center section-padding bg-[#0a001a]">
       <div className="w-full h-full md:px-10 px-5">
+        {/* TitleHeader with neon style */}
         <TitleHeader
           title="Get in Touch – Let’s Connect"
           sub="💬 Have questions or ideas? Let’s talk! 🚀"
         />
-        <div className="grid-12-cols mt-16">
+
+        <div className="grid-12-cols mt-16 gap-8">
+          {/* Form */}
           <div className="xl:col-span-5">
-            <div className="flex-center card-border rounded-xl p-10">
+            <div className="flex-center rounded-xl p-10 border border-[#00ffff] shadow-[0_0_20px_#00ffff] backdrop-blur-md">
               <form
                 ref={formRef}
                 onSubmit={handleSubmit}
-                className="w-full flex flex-col gap-7"
+                className="w-full flex flex-col gap-6"
               >
-                <div>
-                  <label htmlFor="name">Your name</label>
+                {/* Name */}
+                <div className="flex flex-col">
+                  <label htmlFor="name" className="text-[#00ffff] font-semibold mb-1">
+                    Your Name
+                  </label>
                   <input
                     type="text"
                     id="name"
@@ -64,11 +70,15 @@ const Contact = () => {
                     onChange={handleChange}
                     placeholder="What’s your good name?"
                     required
+                    className="px-4 py-2 rounded-lg bg-[#02010a] border border-[#00ffff] text-white focus:outline-none focus:ring-2 focus:ring-[#00ffff] focus:ring-opacity-75 transition"
                   />
                 </div>
 
-                <div>
-                  <label htmlFor="email">Your Email</label>
+                {/* Email */}
+                <div className="flex flex-col">
+                  <label htmlFor="email" className="text-[#f3f3f4] font-semibold mb-1">
+                    Your Email
+                  </label>
                   <input
                     type="email"
                     id="email"
@@ -77,11 +87,15 @@ const Contact = () => {
                     onChange={handleChange}
                     placeholder="What’s your email address?"
                     required
+                    className="px-4 py-2 rounded-lg bg-[#02010a] border border-[#f3f3f4] text-white focus:outline-none focus:ring-2 focus:ring-[#8a79ff] focus:ring-opacity-75 transition"
                   />
                 </div>
 
-                <div>
-                  <label htmlFor="message">Your Message</label>
+                {/* Message */}
+                <div className="flex flex-col">
+                  <label htmlFor="message" className="text-[#f3f3f4] font-semibold mb-1">
+                    Your Message
+                  </label>
                   <textarea
                     id="message"
                     name="message"
@@ -90,25 +104,24 @@ const Contact = () => {
                     placeholder="How can I help you?"
                     rows="5"
                     required
+                    className="px-4 py-2 rounded-lg bg-[#02010a] border border-[#f3f3f4] text-white focus:outline-none focus:ring-2 focus:ring-[#8a79ff] focus:ring-opacity-75 transition"
                   />
                 </div>
 
-                <button type="submit">
-                  <div className="cta-button group">
-                    <div className="bg-circle" />
-                    <p className="text">
-                      {loading ? "Sending..." : "Send Message"}
-                    </p>
-                    <div className="arrow-wrapper">
-                      <img src="/images/arrow-down.svg" alt="arrow" />
-                    </div>
-                  </div>
+                {/* Submit Button */}
+                <button
+                  type="submit"
+                  className="group relative w-full px-6 py-3 mt-4 rounded-lg bg-gradient-to-r from-[#00ffff] via-[#7f00ff] to-[#8a79ff] text-white font-semibold shadow-[0_0_15px_#00ffff] hover:cursor-pointer hover:shadow-[0_0_40px_#8a79ff] transition-all"
+                >
+                  {loading ? "Sending..." : "Send Message"}
                 </button>
               </form>
             </div>
           </div>
+
+          {/* 3D Model */}
           <div className="xl:col-span-7 min-h-96">
-            <div className="bg-[#cd7c2e] w-full h-full hover:cursor-grab rounded-3xl overflow-hidden">
+            <div className="w-full h-full rounded-3xl overflow-hidden shadow-[0_0_25px_#00ffff] hover:shadow-[0_0_40px_#ff00ff] transition">
               <ContactExperience />
             </div>
           </div>

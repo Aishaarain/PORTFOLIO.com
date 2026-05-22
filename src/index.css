@@ -470,3 +470,166 @@ section {
 .card:hover::before {
   opacity: 1;
 }
+
+/* Neon Card */
+.neon-card {
+  background: radial-gradient(circle at top, #02010a, #000);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  border-radius: 14px;
+  box-shadow:
+    0 0 15px rgba(0, 255, 255, 0.25),
+    inset 0 0 10px rgba(0, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Hover Glow Pulse */
+.neon-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow:
+    0 0 25px rgba(0, 255, 255, 0.7),
+    0 0 50px rgba(255, 0, 255, 0.4);
+}
+
+/* Neon Numbers */
+.neon-text {
+  color: #00ffff;
+  text-shadow:
+    0 0 5px #00ffff,
+    0 0 15px #00ffff,
+    0 0 30px #00ffff;
+}
+
+/* Smooth glow animation */
+.neon-card {
+  animation: neonBreath 3s ease-in-out infinite alternate;
+}
+
+@keyframes neonBreath {
+  from {
+    box-shadow: 0 0 12px rgba(0, 255, 255, 0.3);
+  }
+  to {
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.6);
+  }
+}
+
+/* Wrapper */
+.neon-cta-wrapper {
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* Button body */
+.neon-cta {
+  position: relative;
+  padding: 18px 42px;
+  border-radius: 999px;
+  background: radial-gradient(circle, #02010a, #000);
+  border: 1px solid rgba(0, 255, 255, 0.4);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  overflow: hidden;
+
+  box-shadow:
+    0 0 15px rgba(0, 255, 255, 0.35),
+    inset 0 0 10px rgba(0, 255, 255, 0.15);
+
+  transition: all 0.35s ease;
+}
+
+/* Neon ring pulse */
+.neon-ring {
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  border: 2px solid rgba(0, 255, 255, 0.6);
+  opacity: 0.4;
+  animation: neonPulse 2.5s infinite alternate;
+}
+
+/* Text */
+.neon-text {
+  color: #00ffff;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-shadow:
+    0 0 6px #00ffff,
+    0 0 15px #00ffff,
+    0 0 30px rgba(0, 255, 255, 0.8);
+  z-index: 2;
+}
+
+/* Arrow */
+.neon-arrow img {
+  width: 18px;
+  filter: drop-shadow(0 0 6px #00ffff);
+  animation: arrowFloat 1.6s ease-in-out infinite;
+}
+
+/* Hover effects */
+.neon-cta:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow:
+    0 0 25px rgba(0, 255, 255, 0.9),
+    0 0 50px rgba(255, 0, 255, 0.5);
+}
+
+/* Click pulse */
+.neon-cta:active {
+  transform: scale(0.96);
+  box-shadow:
+    0 0 40px rgba(255, 0, 255, 1),
+    0 0 80px rgba(0, 255, 255, 0.9);
+}
+
+/* Animations */
+@keyframes neonPulse {
+  from {
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.4);
+  }
+  to {
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.9);
+  }
+}
+
+@keyframes arrowFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+}
+
+.neon-showcase {
+  background: black;
+}
+
+.neon-logo {
+  border-radius: 12px;
+  padding: 16px;
+  border: 1px solid rgba(34, 211, 238, 0.4);
+  background: rgba(0, 0, 0, 0.7);
+  box-shadow:
+    0 0 12px rgba(34, 211, 238, 0.6),
+    0 0 24px rgba(34, 211, 238, 0.3);
+  transition: all 0.3s ease;
+}
+
+.neon-logo:hover {
+  box-shadow:
+    0 0 20px rgba(34, 211, 238, 1),
+    0 0 45px rgba(34, 211, 238, 0.8);
+  transform: scale(1.08);
+}
+
+.neon-edge {
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(34, 211, 238, 0.4),
+    transparent
+  );
+  box-shadow: 0 0 25px rgba(34, 211, 238, 0.6);
+}

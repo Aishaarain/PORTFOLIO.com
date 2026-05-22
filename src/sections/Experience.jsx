@@ -104,11 +104,7 @@ const Experience = () => {
             {expCards.map((card) => (
               <div key={card.title} className="exp-card-wrapper">
                 <div className="xl:w-2/6">
-                  <GlowCard card={card}>
-                    <div>
-                      <img src={card.imgPath} alt="exp-img" />
-                    </div>
-                  </GlowCard>
+                  
                 </div>
                 <div className="xl:w-4/6">
                   <div className="flex items-start">
@@ -121,14 +117,17 @@ const Experience = () => {
                         <img src={card.logoPath} alt="logo" />
                       </div>
                       <div>
-                        <h1 className="font-semibold text-3xl">{card.title}</h1>
-                        <p className="my-5 text-white-50">
+                        <h1 className="font-semibold text-3xl text-white drop-shadow-[0_0_10px_#00ffff]">
+  {card.title}
+</h1>
+
+                        <p className="my-5 text-[#00ffff]">
                           🗓️&nbsp;{card.date}
                         </p>
                         <p className="text-[#839CB5] italic">
                           Responsibilities
                         </p>
-                        <ul className="list-disc ms-5 mt-5 flex flex-col gap-5 text-white-50">
+                        <ul className="list-disc ms-5 mt-5 flex flex-col gap-5 text-[#00ffff]">
                           {card.responsibilities.map(
                             (responsibility, index) => (
                               <li key={index} className="text-lg">
@@ -151,3 +150,5 @@ const Experience = () => {
 };
 
 export default Experience;
+
+

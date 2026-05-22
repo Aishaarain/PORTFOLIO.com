@@ -1,12 +1,17 @@
 const ExpContent = ({ expContent }) => {
   return (
-    <div className="card-border rounded-xl p-10">
-      <h1 className="font-semibold text-3xl">{expContent.title}</h1>
-      <p>{expContent.date}</p>
-      <p className="text-white-50">Responsibilities</p>
-      <ul className="list-disc ms-5 text-white-50">
+    <div className="neon-card p-10 rounded-xl">
+      <h1 className="neon-title text-3xl font-semibold mb-2">
+        {expContent.title}
+      </h1>
+      <p className="neon-date mb-4">{expContent.date}</p>
+
+      <p className="neon-subtitle mb-2">Responsibilities</p>
+      <ul className="neon-list list-disc ms-5">
         {expContent.responsibilities.map((responsibility, index) => (
-          <li key={index}>{responsibility}</li>
+          <li key={index} className="mb-1">
+            {responsibility}
+          </li>
         ))}
       </ul>
     </div>

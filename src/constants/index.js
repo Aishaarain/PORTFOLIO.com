@@ -1,6 +1,6 @@
 const navLinks = [
   {
-    name: "Work",
+    name: "Projects",
     link: "#work",
   },
   {
@@ -12,8 +12,8 @@ const navLinks = [
     link: "#skills",
   },
   {
-    name: "Testimonials",
-    link: "#testimonials",
+    name: "Certifications",
+    link: "#certifications",
   },
 ];
 
@@ -28,16 +28,10 @@ const words = [
   { text: "Code", imgPath: "/images/code.svg" },
 ];
 
-const counterItems = [
-  { value: 15, suffix: "+", label: "Years of Experience" },
-  { value: 200, suffix: "+", label: "Satisfied Clients" },
-  { value: 108, suffix: "+", label: "Completed Projects" },
-  { value: 90, suffix: "%", label: "Client Retention Rate" },
-];
 
 const logoIconsList = [
   {
-    imgPath: "/images/logos/company-logo-1.png",
+    imgPath: "/images/logos/mongo.svg",
   },
   {
     imgPath: "/images/logos/company-logo-2.png",
@@ -54,21 +48,7 @@ const logoIconsList = [
   {
     imgPath: "/images/logos/company-logo-6.png",
   },
-  {
-    imgPath: "/images/logos/company-logo-7.png",
-  },
-  {
-    imgPath: "/images/logos/company-logo-8.png",
-  },
-  {
-    imgPath: "/images/logos/company-logo-9.png",
-  },
-  {
-    imgPath: "/images/logos/company-logo-10.png",
-  },
-  {
-    imgPath: "/images/logos/company-logo-11.png",
-  },
+ 
 ];
 
 const abilities = [
@@ -94,23 +74,34 @@ const techStackImgs = [
     name: "React Developer",
     imgPath: "/images/logos/react.png",
   },
-  {
-    name: "Python Developer",
-    imgPath: "/images/logos/python.svg",
-  },
+ 
   {
     name: "Backend Developer",
     imgPath: "/images/logos/node.png",
   },
   {
-    name: "Interactive Developer",
-    imgPath: "/images/logos/three.png",
+    name: "Tailwind CSS",
+    imgPath: "/images/logos/tailwind.png",
   },
   {
-    name: "Project Manager",
+    name: "JavaScript",
+    imgPath: "/images/logos/javascript.png",
+  },
+  {
+    name: "Node.js",
+    imgPath: "/images/logos/node.png",
+  },
+  {
+    name: "MongoDB",
+    imgPath: "/images/logos/mongodb.png",
+  },
+  {
+    name: "Git & GitHub",
     imgPath: "/images/logos/git.svg",
   },
+  
 ];
+
 
 const techStackIcons = [
   {
@@ -120,67 +111,22 @@ const techStackIcons = [
     rotation: [0, 0, 0],
   },
   {
-    name: "Python Developer",
-    modelPath: "/models/python-transformed.glb",
-    scale: 0.8,
-    rotation: [0, 0, 0],
-  },
-  {
     name: "Backend Developer",
     modelPath: "/models/node-transformed.glb",
     scale: 5,
     rotation: [0, -Math.PI / 2, 0],
   },
   {
-    name: "Interactive Developer",
+    name: "Full-Stack Developer",
     modelPath: "/models/three.js-transformed.glb",
     scale: 0.05,
     rotation: [0, 0, 0],
   },
   {
-    name: "Project Manager",
+    name: "Git & GitHub",
     modelPath: "/models/git-svg-transformed.glb",
     scale: 0.05,
     rotation: [0, -Math.PI / 4, 0],
-  },
-];
-
-const expCards = [
-  {
-    review: "Adrian brought creativity and technical expertise to the team, significantly improving our frontend performance. His work has been invaluable in delivering faster experiences.",
-    imgPath: "/images/exp1.png",
-    logoPath: "/images/logo1.png",
-    title: "Frontend Developer",
-    date: "January 2023 - Present",
-    responsibilities: [
-      "Developed and maintained user-facing features for the Hostinger website.",
-      "Collaborated closely with UI/UX designers to ensure seamless user experiences.",
-      "Optimized web applications for maximum speed and scalability.",
-    ],
-  },
-  {
-    review: "Adrian’s contributions to Docker's web applications have been outstanding. He approaches challenges with a problem-solving mindset.",
-    imgPath: "/images/exp2.png",
-    logoPath: "/images/logo2.png",
-    title: "Full Stack Developer",
-    date: "June 2020 - December 2023",
-    responsibilities: [
-      "Led the development of Docker's web applications, focusing on scalability.",
-      "Worked with backend engineers to integrate APIs seamlessly with the frontend.",
-      "Contributed to open-source projects that were used with the Docker ecosystem.",
-    ],
-  },
-  {
-    review: "Adrian’s work on Appwrite’s mobile app brought a high level of quality and efficiency. He delivered solutions that enhanced our mobile experience & meet our product goals.",
-    imgPath: "/images/exp3.png",
-    logoPath: "/images/logo3.png",
-    title: "React Native Developer",
-    date: "March 2019 - May 2020",
-    responsibilities: [
-      "Built cross-platform mobile apps using React Native, integrating with Appwrite's backend services.",
-      "Improved app performance and user experience through code optimization and testing.",
-      "Coordinated with the product team to implement features based on feedback.",
-    ],
   },
 ];
 
@@ -193,72 +139,109 @@ const expLogos = [
     name: "logo2",
     imgPath: "/images/logo2.png",
   },
-  {
-    name: "logo3",
-    imgPath: "/images/logo3.png",
-  },
+
 ];
 
-const testimonials = [
+const expCards = [
   {
-    name: "Esther Howard",
-    mentions: "@estherhoward",
     review:
-      "I can’t say enough good things about Adrian. He was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.",
-    imgPath: "/images/client1.png",
+      "Aisha demonstrated strong frontend and MERN stack development skills during the fellowship, consistently building scalable and responsive web applications.",
+    imgPath: "/images/exp1.png",
+    logoPath: "/images/logo1.png",
+    title: "Full-Stack MERN Developer Fellow at Buildables",
+    date: "Sep 2025 - Nov 2025",
+    responsibilities: [
+      "Built dynamic MERN stack applications using React, Node.js, Express, and MongoDB.",
+      "Implemented REST APIs, JWT authentication, and database integration.",
+      "Collaborated in a project-based team environment to develop scalable applications.",
+    ],
   },
   {
-    name: "Wade Warren",
-    mentions: "@wadewarren",
     review:
-      "Working with Adrian was a fantastic experience. He transformed our outdated website into a modern, user-friendly platform. His attention to detail and commitment to quality are unmatched. Highly recommend him for any web dev projects.",
-    imgPath: "/images/client3.png",
+      "Aisha contributed effectively to frontend development projects, creating responsive interfaces and reusable React components during her internship.",
+    imgPath: "/images/exp2.png",
+    logoPath: "/images/logo2.png",
+    title: "Frontend Developer Intern at Verior",
+    date: "Jun 2025 - Aug 2025",
+    responsibilities: [
+      "Developed responsive user interfaces using React.js and Tailwind CSS.",
+      "Worked on reusable component architecture and frontend optimization.",
+      "Collaborated on the Akademi Clone team project using React and Vite.",
+    ],
+  },
+];
+const certifications = [
+  {
+    id: 1,
+    title: "WEB DEVELOPMENT CORE SKILLS",
+    issuer: "IBM",
+    issueDate: "SEP 2023",
+    skills: ["JavaScript", "HTML", "CSS", "ES6+"],
+    link: "hhttps://www.linkedin.com/posts/aisha-arain-049b1a275_thrilled-to-share-that-i-have-completed-the-activity-7111030815735607297-x4Ad?utm_source=share&utm_medium=member_desktop&rcm=ACoAAENDaLkBz5B2EvdRAv3AnpOkW6Sx1W_ahMY",
+    color: "#00ffff",
   },
   {
-    name: "Guy Hawkins",
-    mentions: "@guyhawkins",
-    review:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    imgPath: "/images/client2.png",
+    id: 2,
+    title: "INTRODUCTION TO CLOUD COMPUTING",
+    issuer: "IBM",
+    issueDate: " NOV 2023",
+    skills:["Cloud Computing", "IaaS", "PaaS", "SaaS", "Virtualization", "Serverless"],
+    link: "https://www.coursera.org/account/accomplishments/certificate/2B9CV64YCQAT",
+    color: "#7f00ff",
   },
   {
-    name: "Marvin McKinney",
-    mentions: "@marvinmckinney",
-    review:
-      "Adrian was a pleasure to work with. He turned our outdated website into a fresh, intuitive platform that’s both modern and easy to navigate. Fantastic work overall.",
-    imgPath: "/images/client5.png",
+    id: 3,
+    title: "POSTMAN FLOWS BEGINNERS",
+    issuer: "POSTMAN",
+    issueDate: "OCT 2024",
+    skills: ["Postman Flows", "API Workflows", "Low-Code", "Loops", "Automation"],
+    link: "https://badgr.com/public/assertions/AWJ1SrmSTbWb6-A6m97e7Q",
+    color: "#8a79ff",
   },
   {
-    name: "Floyd Miles",
-    mentions: "@floydmiles",
-    review:
-      "Adrian’s expertise in web development is truly impressive. He delivered a robust and scalable solution for our e-commerce site, and our online sales have significantly increased since the launch. He’s a true professional!",
-    imgPath: "/images/client4.png",
+    id: 4,
+    title: "API FUNDAMENTAL STUDENT EXPERT ",
+    issuer: "POSTMAN",
+    issueDate: "NOV 2024",
+    skills: ["REST APIs", "Postman", "HTTP Methods", "API Testing", "Variables", "Collections"],
+    link: "https://api.badgr.io/public/assertions/cRntGLHOQVeB6mbPJHez1w?identity__email=aishaarain.aaa%40gmail.com",
+    color: "#00ffff",
   },
   {
-    name: "Albert Flores",
-    mentions: "@albertflores",
-    review:
-      "Adrian was a pleasure to work with. He understood our requirements perfectly and delivered a website that exceeded our expectations. His skills in both frontend and backend dev are top-notch.",
-    imgPath: "/images/client6.png",
+    id: 5,
+    title: "WEB DEVELOPMENT COURSE",
+    issuer: "NAVTCC",
+    issueDate: "MAY 2024",
+    skills: ["HTML", "BOOTSTRAP", "CSS", "JS", "REACT"],
+    link: "https://www.linkedin.com/posts/aisha-arain-049b1a275_i-am-deeply-honored-to-receive-this-certificate-activity-7207098837054742528-Go1F?utm_source=share&utm_medium=member_desktop&rcm=ACoAAENDaLkBz5B2EvdRAv3AnpOkW6Sx1W_ahMY",
+    color: "#7f00ff",
   },
+  {
+    id: 6,
+    title: "MERN STACK FELLOWSHIP",
+    issuer: "BUILDABLES",
+    issueDate: "NOV 2025",
+    skills: ["React", "Tailwind CSS", "Responsive", "Node.js", "Express", "MongoDB"],
+    link: "https://www.linkedin.com/posts/aisha-arain-049b1a275_buildables-graduation-activity-7413308723072323584-x0Tl?utm_source=share&utm_medium=member_desktop&rcm=ACoAAENDaLkBz5B2EvdRAv3AnpOkW6Sx1W_ahMY",
+    color: "#00ffff",
+  },
+  
 ];
 
 const socialImgs = [
   {
     name: "insta",
+    Url: "https://instagram.com/yourprofile",
     imgPath: "/images/insta.png",
   },
   {
-    name: "fb",
-    imgPath: "/images/fb.png",
+    name: "GitHub",
+    Url:"https://github.com/Aishaarain",
+    imgPath: "/images/git.png",
   },
   {
-    name: "x",
-    imgPath: "/images/x.png",
-  },
-  {
-    name: "linkedin",
+    name: "linkedin", 
+    Url: "https://www.linkedin.com/in/aisha-arain-049b1a275/",
     imgPath: "/images/linkedin.png",
   },
 ];
@@ -267,10 +250,9 @@ export {
   words,
   abilities,
   logoIconsList,
-  counterItems,
   expCards,
   expLogos,
-  testimonials,
+  certifications,
   socialImgs,
   techStackIcons,
   techStackImgs,

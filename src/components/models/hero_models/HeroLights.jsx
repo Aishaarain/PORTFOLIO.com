@@ -1,42 +1,57 @@
+
+
 import * as THREE from "three";
 
 const HeroLights = () => (
   <>
-    {/* lamp's light */}
+    {/* Neon key light (cyan) */}
     <spotLight
-      position={[2, 5, 6]}
-      angle={0.15}
-      penumbra={0.2}
-      intensity={100}
-      color="white"
+      position={[3, 6, 6]}
+      angle={0.25}
+      penumbra={0.6}
+      intensity={60}
+      color="#00f5ff"
+      castShadow
     />
-    {/* bluish overhead lamp */}
+
+    {/* Neon fill light (pink) */}
     <spotLight
-      position={[4, 5, 4]}
-      angle={0.3}
-      penumbra={0.5}
-      intensity={40}
-      color="#4cc9f0"
+      position={[-4, 5, 4]}
+      angle={0.35}
+      penumbra={0.8}
+      intensity={45}
+      color="#ff2fdc"
     />
-    {/* purplish side fill */}
+
+    {/* Neon rim light (purple) */}
     <spotLight
-      position={[-3, 5, 5]}
+      position={[0, 6, -6]}
       angle={0.4}
       penumbra={1}
-      intensity={60}
-      color="#9d4edd"
+      intensity={50}
+      color="#7c3aed"
     />
-    {/* area light for soft moody fill */}
+
+    {/* Rect area neon light (soft glow wash) */}
     <primitive
-      object={new THREE.RectAreaLight("#a259ff", 8, 3, 2)}
-      position={[1, 3, 4]}
+      object={new THREE.RectAreaLight("#00f5ff", 6, 4, 3)}
+      position={[1.5, 3.5, 3]}
       rotation={[-Math.PI / 4, Math.PI / 4, 0]}
-      intensity={15}
     />
-    {/* subtle point light for atmospheric tone */}
-    <pointLight position={[0, 1, 0]} intensity={10} color="#7209b7" />
-    <pointLight position={[1, 2, -2]} intensity={10} color="#0d00a4" />
+
+    {/* Atmospheric neon accents */}
+    <pointLight
+      position={[0, 1.5, 0]}
+      intensity={12}
+      color="#00f5ff"
+    />
+    <pointLight
+      position={[2, 2, -3]}
+      intensity={10}
+      color="#ff2fdc"
+    />
   </>
 );
 
 export default HeroLights;
+
